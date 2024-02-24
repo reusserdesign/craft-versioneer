@@ -18,7 +18,7 @@ use Craft;
 use Craft\base\Plugin as BasePlugin;
 use craft\events\RegisterComponentTypesEvent;
 use craft\services\Fields;
-use workingconcept\versioneer\fieldtypes\VersionHistoryFieldType;
+use workingconcept\versioneer\fieldtypes\VersionHistoryField;
 use yii\base\Event;
 
 class VersioneerPlugin extends BasePlugin
@@ -35,7 +35,7 @@ class VersioneerPlugin extends BasePlugin
             Fields::class,
             Fields::EVENT_REGISTER_FIELD_TYPES,
             function (RegisterComponentTypesEvent $event) {
-                $event->types[] = VersionHistoryFieldType::class;
+                $event->types[] = VersionHistoryField::class;
             }
         );
         parent::init();

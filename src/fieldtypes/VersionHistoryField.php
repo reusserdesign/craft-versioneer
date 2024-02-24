@@ -2,11 +2,11 @@
 
 namespace workingconcept\versioneer\fieldtypes;
 
-use Craft\base\Field as BaseFieldType;
+use craft\base\Field;
 use Craft;
 use craft\base\ElementInterface;
 
-class VersionHistoryFieldType extends BaseFieldType
+class VersionHistoryField extends Field
 {
 
 	public $name = "yuo";
