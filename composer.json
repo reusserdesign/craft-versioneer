@@ -2,7 +2,6 @@
     "name": "workingconcept/versioneer",
     "description": "A fieldtype for getting at the rest of those entry versions.",
     "type": "craft-plugin",
-    "version": "0.0.3",
     "keywords": [
         "craft",
         "cms",
