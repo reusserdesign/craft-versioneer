@@ -29,5 +29,11 @@
         "changelogUrl": "???",
         "components": {},
         "class": "workingconcept\\versioneer\\VersioneerPlugin"
+    },
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "craftcms/plugin-installer": true
+        }
     }
 }
