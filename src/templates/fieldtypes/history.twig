@@ -5,7 +5,7 @@
 {% elseif versions | length %}
 <table class="data" cellpadding="0" cellpadding="0" border="0" width="100%">
 	<thead>
-		<th></th>
+		<th>{{ "Revision"|t }}</th>
 		<th>{{ "Creator"|t }}</th>
 		<th>{{ "Created"|t }}</th>
 		<th>{{ "Notes"|t }}</th>
@@ -14,8 +14,11 @@
 		{% for version in versions %}
 		<tr>
 			<td>
-				<a href="{{ url(baseUrl~'versions/'~version.versionId) }}">{{ "Version {num}"|t({ num: version.num }) }}</a>
-				{% if loop.first %} <span class="light">current</span>{% endif %}
+			{# https://how1219-01-20.test/admin/entries/pages/73092-touchdowntribute?site=howardBailey&amp;revisionId=8273 #}
+
+				<a href="{{ url(baseUrl~'?site=' ~ currentSiteHandle ~ '&revisionId=' ~ version.revisionId) }}">{{ "Version {num}"|t({ num: versions|length + 1 - loop.index }) }}</a>
+				{% if loop.first %} <i class="light">(current)</span>
+				{% elseif version.id == selectedId %} <i class="light">(selected)</i>{% endif %}
 			</td>
 			<td>{{ version.creator.name }}</td>
 			<td>{{ version.dateCreated.uiTimestamp() }}</td>

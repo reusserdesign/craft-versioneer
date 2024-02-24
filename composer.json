@@ -1,0 +1,34 @@
+{
+    "name": "workingconcept/versioneer",
+    "description": "A fieldtype for getting at the rest of those entry versions.",
+    "type": "craft-plugin",
+    "version": "0.0.3",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "versioneer"
+    ],
+    "support": {
+        "docs": "https://github.com/workingconcept/versioneer-craft-plugin",
+        "issues": "https://github.com/workingconcept/versioneer-craft-plugin"
+    },
+    "license": "MIT",
+    "authors": [],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+            "workingconcept\\versioneer\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Versioneer",
+        "handle": "versioneer",
+        "changelogUrl": "???",
+        "components": {},
+        "class": "workingconcept\\versioneer\\VersioneerPlugin"
+    }
+}
